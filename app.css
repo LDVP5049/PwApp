@@ -1,0 +1,108 @@
+:root {
+    --color-primary: #008080; 
+    --color-accent: #40E0D0;
+    --color-background: #F0F8FF;
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-error: #dc3545; 
+    --color-success: #28a745; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+
+#status-message {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    display: none; 
+}
+
+.status-offline {
+    background-color: var(--color-error);
+    color: var(--color-text-light);
+}
+
+.status-online {
+    background-color: var(--color-success); 
+    color: var(--color-text-light);
+}
+
+#tareas-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tarea {
+    padding: 15px;
+    border-left: 5px solid var(--color-accent);
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background-color: #f9ffff;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tarea:hover {
+    background-color: #bbfafa;
+}
+
+.completada {
+    text-decoration: line-through;
+    opacity: 0.7;
+    border-left: 5px solid var(--color-primary);
+    background-color: #f0f5f5;
+}
+
+#tareas-container > p, #tareas-container > div:only-child {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 20px;
+}

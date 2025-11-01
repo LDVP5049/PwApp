@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea PWA - Stack Básico</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/jpg" href="icono2.jpg">
+        <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <h1>PWA de Tareas</h1>
+        <p>Alumno: Luis Diego Vega Parra</p>
+    </header>
+
+    <div id="status-message">
+        </div>
+    <main>
+        <h2>Lista de Tareas</h2>
+        <div id="tareas-container">
+            Cargando tareas...
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('SW registrado con éxito:', reg.scope))
+                    .catch(err => console.error('Fallo al registrar SW:', err));
+            });
+        }
+    </script>
+</body>
+</html>
